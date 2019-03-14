@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { library } from '@fortawesome/fontawesome-svg-core';
 import './App.css';
 import dummyData from './dummy-data';
 
