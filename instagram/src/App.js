@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { library } from '@fortawesome/fontawesome-svg-core';
 import './App.css';
 import dummyData from './dummy-data';
+import SearchHeader from './components/SearchBar/SearchHeader';
 
 class App extends Component {
   constructor() {
@@ -14,11 +14,7 @@ class App extends Component {
 render() {
   return (
     <div className="App">
-      {this.state.dummyData.map( post => {
-        return (
-          <PostContainer />
-        )
-      })}
+      <SearchHeader />
     </div>
     );
   }
