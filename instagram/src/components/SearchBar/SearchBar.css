@@ -1,0 +1,42 @@
+
+h1 {
+  font-family: 'Grand Hotel', cursive;
+  margin: 0;
+  font-size: 1.5rem;
+  letter-spacing: .1rem;
+}
+
+.header-container {
+  display:flex;
+}
+
+.left {
+  margin-left: 5%;
+  display: flex;
+  justify-content: flex-start;
+  width: 33.3%;
+}
+
+ .center {
+   margin-top: 4px;
+   display: flex;
+   justify-content: center;
+   width: 33.3%;
+ }
+
+.right {
+  margin-right: 5%;
+  display: flex;
+  justify-content: flex-end;
+  width: 33.3%;
+}
+
+.left-icon {
+  margin-top: 4px;
+  padding-right: 5%;
+}
+
+.right-icons {
+  margin-top: 4px;
+  padding-left: 5%;
+}
