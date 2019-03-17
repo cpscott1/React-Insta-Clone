@@ -3,6 +3,7 @@ import FeatherIcon from 'feather-icons-react';
 import './SearchBar.css';
 import SearchBar from './SearchBar';
 
+
 const SearchHeader = () => {
    return (
      <header className='header-container'>

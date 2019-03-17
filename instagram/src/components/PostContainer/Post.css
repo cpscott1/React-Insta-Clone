@@ -1,0 +1,19 @@
+.container {
+  margin: 0 auto;
+  width: 50%;
+}
+
+
+header {
+  border: 1px solid #FAFAFA;
+  display: flex;
+}
+
+img {
+  width: 100%;
+}
+
+.thumbnail img {
+  width: 25%;
+  border-radius: 90px;
+}
