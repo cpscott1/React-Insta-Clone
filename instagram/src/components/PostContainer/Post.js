@@ -1,18 +1,20 @@
 import React from 'react';
 
 const Post = (props) => {
+  const {post} = props
+  const {thumbnailUrl, username, imageUrl} = post
   return (
     <div className='container'>
       <header>
         <div className='thumbnail'>
-        <img src={props.post.thumbnailUrl} />
+        <img src={thumbnailUrl} />
         </div>
         <div className='username'>
-        {props.post.username}
+        {username}
         </div>
       </header>
       <div className='picture'>
-        <img src={props.post.imageUrl} />
+        <img src={imageUrl} />
       </div>
     </div>
   )
