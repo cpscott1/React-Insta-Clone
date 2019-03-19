@@ -2,7 +2,8 @@ import React from 'react';
 import Post from './Post';
 
 const PostContainer = (props) => {
-  return <Post post={props.post}/>
+  const {post} = props
+  return <Post post={post}/>
 }
 
 export default PostContainer;
