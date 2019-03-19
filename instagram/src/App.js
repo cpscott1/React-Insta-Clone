@@ -20,10 +20,11 @@ render() {
     <div className="App">
       <SearchHeader />
       <div>
-      {this.state.posts.map(post => {
+      {this.state.posts.map((post, username) => {
         return (
          <PostContainer
           post={post}
+          key={username}
          />
           )
       })}
