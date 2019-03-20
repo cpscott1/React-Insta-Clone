@@ -3,21 +3,31 @@ import Comment from './Comment';
 import CommentForm from './CommentForm';
 
 class CommentSection extends Component {
-  state = {
-    addComments: ''
+  constructor(props){
+    super(props);
+  this.state = {
+    addComments: '',
+    comments: this.props.comments
   }
-
+}
 
   addNewComment = (event, index) => {
-    this.setState(prevState => {
-      return { addComments: event.target.value}
+    const newComments = this.state.comments.map(newcomment => {
+      return newcomment
     })
+    const item = {
+      username: 'billie',
+      text: 'pepperoni'
+    }
+    newComments.push(item)
+    this.setState({comments: newComments})
   }
 
   render() {
-    const {comments} = this.props;
+    const {comments} = this.state;
   return (
     <div className='comment-container'>
+    <button onClick={this.addNewComment}>Text</button>
       {comments.map((comment, username) => {
         return (
           <Comment key={username} comment={comment}/>
