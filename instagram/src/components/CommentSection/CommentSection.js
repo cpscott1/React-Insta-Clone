@@ -3,7 +3,7 @@ import Comment from './Comment';
 import CommentForm from './CommentForm';
 
 const CommentSection = (props) => {
-  const {comments} = props;
+  const {username, comments} = props;
   return (
     <div className='comment-container'>
       {comments.map((comment, username) => {
@@ -11,7 +11,7 @@ const CommentSection = (props) => {
           <Comment key={username} comment={comment}/>
         )
       })}
-      <CommentForm />
+      <CommentForm onSubmitComment={(username, textInput)}/>
     </div>
   )
 }
