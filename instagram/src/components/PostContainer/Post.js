@@ -33,12 +33,12 @@ incrementCount = () => {
         <img src={imageUrl} alt="pic" />
       </div>
       <footer>
-        <div className='icons' count={count} onClick={this.incrementCount}>
+        <div className='icons' onClick={this.incrementCount}>
           <FeatherIcon icon='heart'  />
           <FeatherIcon icon='message-circle' />
         </div>
         <div className='likes'>
-          {likes} likes
+          {likes + count} likes
         </div>
         <CommentSection
           username={username}
