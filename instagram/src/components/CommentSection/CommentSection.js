@@ -11,29 +11,21 @@ class CommentSection extends Component {
   }
 }
 
-  addNewComment = (event, index) => {
-    const newComments = this.state.comments.map(newcomment => {
-      return newcomment
-    })
-    const item = {
-      username: 'billie',
-      text: 'pepperoni'
-    }
-    newComments.push(item)
-    this.setState({comments: newComments})
+  addNewComment = (username, text) => {
+    const comment = {username: username, text: text}
+    this.setState({comments: [...this.state.comments, comment]})
   }
 
   render() {
-    const {comments} = this.state;
   return (
     <div className='comment-container'>
     <button onClick={this.addNewComment}>Text</button>
-      {comments.map((comment, username) => {
+      {this.state.comments.map((comment, username) => {
         return (
           <Comment key={username} comment={comment}/>
         )
       })}
-      <CommentForm />
+      <CommentForm addComment={this.addNewComment} />
     </div>
   )
 }
