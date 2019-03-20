@@ -1,8 +1,23 @@
 import React from 'react';
 import FeatherIcon from 'feather-icons-react';
 import CommentSection from '../CommentSection/CommentSection';
-const Post = (props) => {
-  const {post} = props
+
+class Post extends React.Component {
+  state = {
+    count: 0
+  }
+
+
+incrementCount = () => {
+  this.setState(prevState => {
+    return { count: prevState.count + 1 }
+  })
+}
+
+
+  render() {
+  const {post} = this.props
+  const {count} = this.state
   const {thumbnailUrl, username, imageUrl, likes, comments} = post
   return (
     <div className='container'>
@@ -18,8 +33,8 @@ const Post = (props) => {
         <img src={imageUrl} alt="pic" />
       </div>
       <footer>
-        <div className='icons'>
-          <FeatherIcon icon='heart' />
+        <div className='icons' count={count} onClick={this.incrementCount}>
+          <FeatherIcon icon='heart'  />
           <FeatherIcon icon='message-circle' />
         </div>
         <div className='likes'>
@@ -32,6 +47,7 @@ const Post = (props) => {
       </footer>
     </div>
   )
+}
 }
 
 export default Post;
