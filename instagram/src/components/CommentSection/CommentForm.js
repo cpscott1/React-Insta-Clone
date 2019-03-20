@@ -13,7 +13,6 @@ class CommentForm extends Component {
 
   submitHandler = (event) => {
     console.log(this.state.textInput)
-    addNewComment(event)
     event.preventDefault()
   }
 
