@@ -12,10 +12,7 @@ class CommentForm extends Component {
   }
 
   submitHandler = (event) => {
-    const {username, onSubmitComment} = this.props
-    const {textInput} = this.state
     event.preventDefault()
-     onSubmitComment(username, textInput);
   }
 
   render() {

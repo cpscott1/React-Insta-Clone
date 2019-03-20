@@ -1,9 +1,21 @@
-import React from 'react';
+import React, {Component} from 'react';
 import Comment from './Comment';
 import CommentForm from './CommentForm';
 
-const CommentSection = (props) => {
-  const {username, comments} = props;
+class CommentSection extends Component {
+  state = {
+    addComments: ''
+  }
+
+
+  addNewComment = (event, index) => {
+    this.setState(prevState => {
+      return { addComments: event.target.value}
+    })
+  }
+
+  render() {
+    const {comments} = this.props;
   return (
     <div className='comment-container'>
       {comments.map((comment, username) => {
@@ -11,9 +23,10 @@ const CommentSection = (props) => {
           <Comment key={username} comment={comment}/>
         )
       })}
-      <CommentForm onSubmitComment={(username, textInput)}/>
+      <CommentForm />
     </div>
   )
+}
 }
 
 
