@@ -23,7 +23,7 @@ const Post = (props) => {
           <FeatherIcon icon='message-circle' />
         </div>
         <div className='likes'>
-        {likes} likes
+          {likes} likes
         </div>
         <CommentSection
           username={username}

@@ -2,7 +2,7 @@ import React from 'react';
 import Comment from './Comment';
 
 const CommentSection = (props) => {
-  const {username, comments} = props;
+  const {comments} = props;
   return (
     <div className='comment-container'>
       {comments.map((comment, username) => {
@@ -10,8 +10,10 @@ const CommentSection = (props) => {
           <Comment key={username} comment={comment}/>
         )
       })}
+    
     </div>
   )
 }
+
 
 export default CommentSection;

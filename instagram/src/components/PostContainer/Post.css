@@ -17,3 +17,7 @@ img {
   width: 25%;
   border-radius: 90px;
 }
+
+.likes {
+  font-weight: bold;
+}
