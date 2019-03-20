@@ -20,9 +20,9 @@ class CommentSection extends Component {
   return (
     <div className='comment-container'>
     <button onClick={this.addNewComment}>Text</button>
-      {this.state.comments.map((comment, username) => {
+      {this.state.comments.map((comment, index) => {
         return (
-          <Comment key={username} comment={comment}/>
+          <Comment key={index} comment={comment}/>
         )
       })}
       <CommentForm addComment={this.addNewComment} />
