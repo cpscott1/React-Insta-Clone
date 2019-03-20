@@ -1,5 +1,6 @@
 import React from 'react';
 import Comment from './Comment';
+import CommentForm from './CommentForm';
 
 const CommentSection = (props) => {
   const {comments} = props;
@@ -10,7 +11,7 @@ const CommentSection = (props) => {
           <Comment key={username} comment={comment}/>
         )
       })}
-    
+      <CommentForm />
     </div>
   )
 }

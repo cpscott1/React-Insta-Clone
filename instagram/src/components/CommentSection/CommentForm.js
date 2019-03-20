@@ -6,16 +6,19 @@ class CommentForm extends Component {
   }
 
   inputHandler = (event) => {
-    event.preventDefault()
     this.setState({
       textInput: event.target.value
     })
   }
 
+  submitHandler = (event) => {
+    event.preventDefault()
+  }
+
   render() {
     return (
-      <form>
-        <input type='text' onChange={this.inputHandler} placeholder='Add a comment...'/>
+      <form onSubmit={this.submitHandler}>
+        <input type='text'  onChange={this.inputHandler} value={this.state.textInput} placeholder='Add a comment...'/>
       </form>
     )
   }
