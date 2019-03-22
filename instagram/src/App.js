@@ -17,20 +17,12 @@ componentDidMount() {
 
 
 
-
 render() {
   return (
     <div className="App">
       <SearchHeader />
       <div>
-      {this.state.posts.map((post, username) => {
-        return (
-         <PostContainer
-          post={post}
-          key={username}
-         />
-          )
-      })}
+      <PostContainer posts={this.state.posts}/>
        </div>
     </div>
     );

@@ -3,11 +3,25 @@ import PropTypes from 'prop-types';
 import Post from './Post';
 
 
-const PostContainer = (props) => {
-  const {post} = props
-  return <Post post={post}/>
-}
+class PostContainer extends React.Component {
+  constructor() {
+    super()
+    this.state = {
+      filteredPosts: []
+    }
+  }
 
+  render() {
+    return (
+      {this.props.posts.map((post) => {
+        return (
+         <Post post={post}/>
+          )
+      })}
+    )
+
+  }
+}
 PostContainer.propTypes = {
   post: PropTypes.object
 }

@@ -1,10 +1,14 @@
 import React from 'react';
 
 
-const SearchBar = () => {
+const SearchBar = (props) => {
   return (
     <form>
-      <input type="text" placeholder="Search" />
+      <input type="text"
+      name="textInput"
+      placeholder="Search"
+      value={props.textInput}
+      />
     </form>
   )
 }

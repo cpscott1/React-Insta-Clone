@@ -7,20 +7,24 @@ class CommentForm extends Component {
 
   inputHandler = (event) => {
     this.setState({
-      textInput: event.target.value
+      [event.target.name]: event.target.value
     })
   }
 
   submitHandler = (event) => {
-    this.addNewComment(this.username, this.text)
     event.preventDefault()
+    this.props.addNewComment('NEW USER', this.state.textInput)
+    this.setState({
+      textInput: ''
+    })
   }
 
   render() {
-    const {textInput} = this.state
     return (
       <form onSubmit={this.submitHandler}>
-        <input type='text'  onChange={this.inputHandler} value={textInput} placeholder='Add a comment...'/>
+        <input type='text'  onChange={this.inputHandler}
+          name="textInput"
+          value={this.state.textInput} placeholder='Add a comment...'/>
       </form>
     )
   }

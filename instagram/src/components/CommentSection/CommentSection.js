@@ -19,13 +19,12 @@ class CommentSection extends Component {
   render() {
   return (
     <div className='comment-container'>
-    <button onClick={this.addNewComment}>Text</button>
       {this.state.comments.map((comment, index) => {
         return (
           <Comment key={index} comment={comment}/>
         )
       })}
-      <CommentForm addComment={this.addNewComment} />
+      <CommentForm addNewComment={this.addNewComment} />
     </div>
   )
 }
