@@ -20,7 +20,7 @@ componentDidMount() {
 
 searchHandler = (searchterm) => {
   let filtered = this.state.posts.filter(post => {
-    post.includes(searchterm)
+    return post.includes(searchterm)
   })
   this.setState({
     filteredPosts: filtered
