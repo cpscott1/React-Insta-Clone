@@ -13,9 +13,9 @@ class PostContainer extends React.Component {
 
   render() {
     return (
-      this.props.posts.map((post) => {
+      this.props.posts.map((post, index) => {
         return (
-         <Post post={post}/>
+         <Post key={index} post={post}/>
           )
       })
     )
