@@ -30,9 +30,9 @@ searchHandler = (searchterm) => {
 render() {
   return (
     <div className="App">
-      <SearchHeader />
+      <SearchHeader onChange={this.searchHandler} />
       <div>
-      <PostContainer posts={this.state.posts}/>
+      <PostContainer posts={this.state.filteredPosts}/>
        </div>
     </div>
     );
