@@ -8,14 +8,24 @@ import PostContainer from './components/PostContainer/PostContainer';
 
 class App extends Component {
     state = {
-      posts: []
+      posts: [],
+    filteredPosts: []
     };
 
 componentDidMount() {
-  this.setState({ posts: dummyData })
+  this.setState({
+    posts: dummyData,
+    filteredPosts: dummyData })
 }
 
-
+searchHandler = (searchterm) => {
+  let filtered = this.state.posts.filter(post => {
+    post.includes(searchterm)
+  })
+  this.setState({
+    filteredPosts: filtered
+  })
+}
 
 render() {
   return (

@@ -13,11 +13,11 @@ class PostContainer extends React.Component {
 
   render() {
     return (
-      {this.props.posts.map((post) => {
+      this.props.posts.map((post) => {
         return (
          <Post post={post}/>
           )
-      })}
+      })
     )
 
   }

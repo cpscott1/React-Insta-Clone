@@ -8,6 +8,7 @@ const SearchBar = (props) => {
       name="textInput"
       placeholder="Search"
       value={props.textInput}
+      onChange={this.searchHandler}
       />
     </form>
   )
