@@ -14,7 +14,7 @@ const SearchHeader = () => {
         <h1>Instagram</h1>
       </div>
       <div className="center">
-      <SearchBar />
+      <SearchBar onChange={this.searchHandler} />
       </div>
       <div className='right'>
         <div className='right-icons'>
