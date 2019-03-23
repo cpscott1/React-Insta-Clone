@@ -19,9 +19,9 @@ componentDidMount() {
 }
 
 searchHandler = (searchterm) => {
-  let filtered = this.state.posts.filter(post => {
-    return post.includes(searchterm)
-  })
+  let filtered = this.state.posts.filter((post) => post.username.includes(searchterm))
+  console.log({filtered});
+
   this.setState({
     filteredPosts: filtered
   })
@@ -30,7 +30,7 @@ searchHandler = (searchterm) => {
 render() {
   return (
     <div className="App">
-      <SearchHeader onChange={this.searchHandler} />
+      <SearchHeader searchHandler={this.searchHandler}  />
       <div>
       <PostContainer posts={this.state.filteredPosts}/>
        </div>

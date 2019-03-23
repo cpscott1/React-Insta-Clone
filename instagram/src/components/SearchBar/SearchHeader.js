@@ -4,7 +4,7 @@ import './SearchBar.css';
 import SearchBar from './SearchBar';
 
 
-const SearchHeader = (post) => {
+const SearchHeader = (props) => {
    return (
      <header className='header-container'>
       <div className='left'>
@@ -14,7 +14,8 @@ const SearchHeader = (post) => {
         <h1>Instagram</h1>
       </div>
       <div className="center">
-      <SearchBar  />
+      <SearchBar handleSearch={(event) => {
+        props.searchHandler(event.target.value)}}  />
       </div>
       <div className='right'>
         <div className='right-icons'>
